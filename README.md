@@ -31,7 +31,7 @@ El proyecto es el resultado de mi aprendizaje en el bootcamp de **Adalab**.
 
 Puedes consultar la versión en vivo del censo aquí:
 
-👉 [(https://beta.adalab.es/modulo-3-evaluacion-final-Colet-Cristina/)]
+👉 [(https://colet-cristina.github.io/modulo-3-evaluacion-final-Colet-Cristina/)]
 
 🖋️ Autora
 Cristina Colet Junior Web Developer en constante aprendizaje.
