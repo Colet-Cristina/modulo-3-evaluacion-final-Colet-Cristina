@@ -12,6 +12,7 @@ import PlaceholderImage from "../images/placeholder.png";
 import CharacterDetails from "./pages/DetailsPage";
 import FilterName from "./filters/FilterName";
 import FilterHouse from "./filters/FilterHouse";
+import TopImg from "../images/image.png";
 
 function App() {
   // Lista personajes.
@@ -53,15 +54,19 @@ function App() {
     .filter((eachCharacter) =>
       (eachCharacter.name || "")
         .toLocaleLowerCase()
-        .includes(filterName.toLocaleLowerCase())
+        .includes(filterName.toLocaleLowerCase()),
     )
     .filter((eachCharacter) =>
       (eachCharacter.house || "")
         .toLocaleLowerCase()
-        .includes(filterHouse.toLocaleLowerCase())
+        .includes(filterHouse.toLocaleLowerCase()),
     );
   const findCharacter = (idToFind) => {
     return allCharacters.find((char) => char.id === idToFind);
+  };
+  //Boton top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -89,6 +94,9 @@ function App() {
                 <h2 className="list-title"> Comunidad de Brujas y Magos </h2>
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
+                <button className="top" onClick={scrollToTop}>
+                  <img src={TopImg} alt="Volver arriba" className="top__img" />
+                </button>
               </div>
             }
           />

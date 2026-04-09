@@ -1,0 +1,43 @@
+// --- COLORES ---
+$color-primary: #ffd900; // Dorado brillante
+$color-bg-body: #130404; // Fondo general oscuro
+$color-border: #7d1212; // Rojo oscuro para bordes
+$color-shadow: rgba(255, 217, 0, 0.5); // Resplandor dorado de los hovers
+
+// Colores adicionales de tu diseño
+$color-text-low: rgba(255, 217, 0, 0.63); // Dorado para texto normal
+$color-bg-card: #5d000079; // Fondo de las tarjetas
+$color-bg-header: rgba(131, 4, 4, 0.438); // Fondo del header y detalle
+$color-bg-null: #380000; //Mensaje de error
+$color-red-dark: #5d0000;
+
+// --- MEDIDAS ---
+$padding-small: 0.3125rem;
+$border-radius-base: 0.25rem;
+
+// --- FUENTES ---
+$font-main: "Cinzel", serif;
+
+// --- ANIMACIONES ---
+
+@keyframes fadeInPure {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Brillo mágico */
+@keyframes magicGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 0.3125rem $color-shadow;
+  }
+  50% {
+    text-shadow:
+      0 0 0.625rem rgba(255, 217, 0, 0.9),
+      0 0 1.25rem rgba(255, 217, 0, 0.6);
+  }
+}

@@ -1,0 +1,126 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-page {
+  background-color: $color-bg-header;
+  border: 0.3rem solid $color-text-low;
+  width: 90%;
+  max-width: 500rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  animation: fadeInPure 1.5s ease-out 0.3s forwards;
+  opacity: 0;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+.detail-img {
+  width: 50%;
+  height: 50%;
+  border: 0.3rem solid black;
+
+  @media (max-width: 600px) {
+    width: 70%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.detail-list {
+  h2 {
+    font-size: 3.2rem;
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem 1rem;
+  }
+
+  dt {
+    font-size: 1.7rem;
+    text-align: right;
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  dd {
+    font-size: 1.5rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.details-link {
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border: 0.1rem solid $color-text-low;
+  background-color: $color-bg-header;
+  color: $color-text-low;
+  border-radius: 0.3rem;
+  font-weight: bold;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow:
+      0 0 0.9375rem 0.3125rem $color-primary,
+      0 0 1.875rem 0.625rem $color-shadow;
+  }
+}
+
+.detail-null {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 5rem auto;
+  max-width: 37.5rem;
+  background-color: $color-bg-null;
+  border: 0.1875rem solid $color-primary;
+  border-radius: 0.625rem;
+
+  h2 {
+    color: $color-primary;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $color-red-dark;
+    color: $color-primary;
+    border: 0.0625rem solid $color-primary;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #7a0000;
+      box-shadow: 0 0 0.9375rem $color-primary;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* _header.scss */
+
+.header {
+  height: 11rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 0.5rem $color-border;
+  background-image: url("/src/images/harry.png");
+  background-repeat: no-repeat;
+  background-position: center 50%;
+
+  // Media Query para móvil
+  @media (max-width: 600px) {
+    height: 8rem;
+    border-bottom-width: 0.3rem;
+    background-position: center 40%;
+
+    .title {
+      line-height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+}

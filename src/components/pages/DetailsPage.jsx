@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router";
 
-//aray completo
+//array completo
 function CharacterDetails({ findCharacter }) {
   const params = useParams();
   const idCharacter = params.id;
