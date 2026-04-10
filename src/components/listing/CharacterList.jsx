@@ -4,14 +4,14 @@ function CharacterList({ characters }) {
   if (characters.length === 0) {
     return (
       <section className="detail-null">
-        <p className="detail-null__text">
-          ¡Mensaje del Departamento de Misterios!
+        <div className="detail-null__text">
+          <p>¡Mensaje del Departamento de Misterios!</p>
           <p>
             🔍 Busqué ese nombre en el Mapa del Merodeador, pero ni rastro.
             Puede que hiciera un Evanesco tan potente que desapareció hasta de
             la lista de invitad@s.
           </p>
-        </p>
+        </div>
       </section>
     );
   }

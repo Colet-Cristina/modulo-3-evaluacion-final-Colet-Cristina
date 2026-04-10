@@ -1,9 +1,5 @@
 function Header() {
-  return (
-    <header className="header">
-      <p className="header-title">Draco dormiens nunquam titillandus</p>
-    </header>
-  );
+  return <header className="header"></header>;
 }
 
 export default Header;

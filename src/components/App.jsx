@@ -13,6 +13,7 @@ import CharacterDetails from "./pages/DetailsPage";
 import FilterName from "./filters/FilterName";
 import FilterHouse from "./filters/FilterHouse";
 import TopImg from "../images/image.png";
+import ImgFooter from "../images/gorro.png";
 
 function App() {
   // Lista personajes.
@@ -46,7 +47,7 @@ function App() {
         setAllCharacters(allCleanCharacter);
       })
       .catch((err) => console.error(err));
-  });
+  }, []);
 
   //Variables para pintar la página.
 
@@ -95,7 +96,7 @@ function App() {
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
                 <button className="top" onClick={scrollToTop}>
-                  <img src={TopImg} alt="Volver arriba" className="top__img" />
+                  <img src={TopImg} alt="Volver arriba" className="top-img" />
                 </button>
               </div>
             }
@@ -106,6 +107,13 @@ function App() {
           />
         </Routes>
       </main>
+      <footer className="footer">
+        <img src={ImgFooter} alt="Gorro de bruja" className="footer-img" />
+        <div className="footer-content">
+          <p className="footer-text">"Draco Dormiens Nunquam Titillandus"</p>
+          <p className="footer-copy">&copy; C.Colet. Hecho con 💜 y mucho ☕</p>
+        </div>
+      </footer>
     </div>
   );
 }
