@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: $color-red-dark;
   border: 0.125rem solid $color-primary;
   border-radius: 50%;
@@ -16,8 +16,10 @@
   padding: 0;
   overflow: hidden;
 
+  animation: floating 3s ease-in-out infinite;
+
   &-img {
-    width: 65%;
+    width: 70%;
     height: 65%;
     object-fit: contain;
   }
@@ -26,6 +28,7 @@
     transform: scale(1.1) translateY(-0.3125rem);
     box-shadow: 0 0 1.25rem $color-shadow;
     background-color: lighten($color-red-dark, 5%);
+    animation-play-state: paused; // La animación se para al poner el ratón
   }
 
   @media (max-width: 600px) {
@@ -33,5 +36,25 @@
     right: 1rem;
     width: 2.8rem;
     height: 2.8rem;
+  }
+
+  @media (max-width: 600px) {
+    bottom: 4.5rem;
+    right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-10px); // El botón sube
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); // La sombra se estira
+  }
+  100% {
+    transform: translateY(0);
   }
 }

@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   background-color: $color-bg-body;
-  border-top: 1px solid $color-border;
+  border-top: 3px solid $color-border;
 
   z-index: 100;
 
@@ -38,5 +38,21 @@
     margin: 0;
     opacity: 0.8;
     font-size: 0.75rem;
+  }
+
+  // Media Query para móvil
+  @media (max-width: 600px) {
+    &-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &-img {
+      width: 3.5rem;
+    }
+
+    &-text {
+      font-size: 0.9rem;
+    }
   }
 }
