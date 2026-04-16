@@ -4,6 +4,8 @@
 
 El proyecto es el resultado de mi aprendizaje en el bootcamp de **Adalab**.
 
+![Vista previa del Censo Mágico](./src/images/screenshot.jpg)
+
 ---
 
 ## 🔮 Encantamientos (Funcionalidades)
