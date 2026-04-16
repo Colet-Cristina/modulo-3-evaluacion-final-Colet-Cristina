@@ -12,7 +12,7 @@
 
 .list-card {
   list-style: none;
-  padding: 0;
+  padding: 3rem;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
@@ -40,7 +40,7 @@
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 

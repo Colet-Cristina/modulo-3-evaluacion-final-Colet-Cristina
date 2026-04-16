@@ -3,23 +3,62 @@
 .header {
   height: 11rem;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
   border-bottom: solid 0.3rem $color-border;
-  background-image: url("/src/images/harry.png");
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  background-size: 60%;
+  position: relative;
 
-  // Media Query para móvil
-  @media (max-width: 600px) {
-    height: 8rem;
-    border-bottom-width: 0.3rem;
-    background-position: center 70%;
-    background-size: 70%;
+  &__houses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
 
-    .title {
-      line-height: 3rem;
-      font-size: 1.5rem;
+  &__logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 10rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .houses__left,
+  .houses__right {
+    width: 2.8rem;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 0.5rem rgba(212, 175, 55, 0.6));
+
+    &:hover {
+      opacity: 1;
+      filter: drop-shadow(0 0 0.8rem rgba(212, 175, 55, 0.9));
+    }
+  }
+
+  // --- Desktop ---
+  @media (min-width: 768px) {
+    height: 14rem;
+    padding: 0 3rem;
+
+    &__houses {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    &__img {
+      height: 11rem;
+    }
+
+    .houses__left,
+    .houses__right {
+      width: 5rem;
     }
   }
 }
